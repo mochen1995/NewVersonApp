@@ -5,6 +5,17 @@
 封装难度应该不大
 
 使用方法
+
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+     }
+     dependencies {
+	        compile 'com.github.mochen1995:NewVersonApp:v1.1'
+     }
+
 在MyApplication中onCreate中进行网络监听
 OkHttpUtils.initNetService(this);
 
