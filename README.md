@@ -5,8 +5,8 @@
 在MyApplication中onCreate中进行网络监听
 OkHttpUtils.initNetService(this);
 
-1.get请求，返回json
-OkHttpUtils.get("", new OkHttpUtils.OnRequestCallBack() {
+1.get请求，返回json。
+    OkHttpUtils.get("", new OkHttpUtils.OnRequestCallBack() {
 			@Override
 			public void onSucceed(String json) {
          //成功
@@ -24,7 +24,7 @@ OkHttpUtils.get("", new OkHttpUtils.OnRequestCallBack() {
 		});
 
 2.get请求，返回对象，DataType泛型类型 OBJECT单体对象、ARRAY集合对象
-OkHttpUtils.get("", OkHttpUtils.DataType.OBJECT, Dog.class, new OkHttpUtils.OnRequestDataCallBack<Dog>() {
+    OkHttpUtils.get("", OkHttpUtils.DataType.OBJECT, Dog.class, new OkHttpUtils.OnRequestDataCallBack<Dog>() {
 			@Override
 			public void onSucceed(Dog data) {
 			  //json数据返回的是单体对象时回调
@@ -52,7 +52,7 @@ OkHttpUtils.get("", OkHttpUtils.DataType.OBJECT, Dog.class, new OkHttpUtils.OnRe
      data:{
      }
    }
-   OkHttpUtils.get("", new TypeToken<BaseResponse<Dog>>() {
+    OkHttpUtils.get("", new TypeToken<BaseResponse<Dog>>() {
 		}, new OkHttpUtils.onRequestCallBacks<BaseResponse<Dog>>() {
 			@Override
 			public void onSucceed(BaseResponse<Dog> data) {
@@ -70,13 +70,14 @@ OkHttpUtils.get("", OkHttpUtils.DataType.OBJECT, Dog.class, new OkHttpUtils.OnRe
 			}
 		});
     
-    4.post请求同get一致 OkHttpUtils.post(""...)
+    4.post请求同get一致 
+    OkHttpUtils.post(""...)
     
     5.上传表单+图片
     Map<String ,String > map = new HashMap<>();
 		map.put("name","xxx");
     第一个参数：url，第二个表单数据，第三个对应图片的键参数，第四个图片路径，也可以是图片文件
-		OkHttpUtils.upLoadingImage("", map, "img", "mnt/sdcard/aa.jpg", new OkHttpUtils.OnRequestCallBack() {
+    OkHttpUtils.upLoadingImage("", map, "img", "mnt/sdcard/aa.jpg", new OkHttpUtils.OnRequestCallBack() {
 			@Override
 			public void onSucceed(String json) {
 				
