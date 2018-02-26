@@ -5,7 +5,8 @@
 在MyApplication中onCreate中进行网络监听
 OkHttpUtils.initNetService(this);
 
-1.get请求，返回json。
+1.get请求
+
     OkHttpUtils.get("", new OkHttpUtils.OnRequestCallBack() {
 			@Override
 			public void onSucceed(String json) {
@@ -24,6 +25,7 @@ OkHttpUtils.initNetService(this);
 		});
 
 2.get请求，返回对象，DataType泛型类型 OBJECT单体对象、ARRAY集合对象
+
     OkHttpUtils.get("", OkHttpUtils.DataType.OBJECT, Dog.class, new OkHttpUtils.OnRequestDataCallBack<Dog>() {
 			@Override
 			public void onSucceed(Dog data) {
@@ -52,6 +54,7 @@ OkHttpUtils.initNetService(this);
      data:{
      }
    }
+	
     OkHttpUtils.get("", new TypeToken<BaseResponse<Dog>>() {
 		}, new OkHttpUtils.onRequestCallBacks<BaseResponse<Dog>>() {
 			@Override
