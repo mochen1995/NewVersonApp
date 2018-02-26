@@ -72,11 +72,15 @@ OkHttpUtils.initNetService(this);
 
 			}
 		});
+		
+		
     
-    4.post请求同get一致 
+   4.post请求同get一致 
+    
     OkHttpUtils.post(""...)
     
-    5.上传表单+图片
+   5.上传表单+图片
+    
     Map<String ,String > map = new HashMap<>();
 		map.put("name","xxx");
     第一个参数：url，第二个表单数据，第三个对应图片的键参数，第四个图片路径，也可以是图片文件
@@ -97,11 +101,12 @@ OkHttpUtils.initNetService(this);
 			}
 		});
     
-    6.上传表单+任意文件
-    同上
+  6.上传表单+任意文件，同上
+    
     OkHttpUtils.upLoadingFile(...);
     
-    7.文件下载
+  7.文件下载
+    
     OkHttpUtils.download("", "mnt/sdcard/xx.apk", new OkHttpUtils.OnProgressListenter() {
 			@Override
 			public void onProgress(long totalBytes, long currentBytes, int percent) {
