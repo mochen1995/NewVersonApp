@@ -1,5 +1,8 @@
 # NewVersonApp
-发布
+发布常用工具类(shared，CBD对话框)及对Okhttp3的简化封装
+
+此处只阐述网络请求的使用方法，其他的可自行查看源码，只是简单的
+封装难度应该不大
 
 使用方法
 在MyApplication中onCreate中进行网络监听
